@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Huarique D' Jaimito | Pollos, Parrillas y Comida Criolla</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barra Top Promocional -->
+  <div class="top-bar">
+    <p>🔥 ¡DE LA BRASA A TU CASA! | 🛵 Delivery: <strong>913 761 155</strong> | 📍 Jr. Simón Bolívar N° 553 - Ahuac</p>
+  </div>
+
+  <!-- Encabezado / Navegación -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🍗</span>
+        <div class="logo-text">
+          <span class="brand-name">EL HUARIQUE D' JAIMITO</span>
+          <span class="brand-tagline">Pollos • Parrillas • Comida Criolla</span>
+        </div>
+      </a>
+
+      <div class="payment-badges">
+        <span class="badge-yape">Yape</span>
+        <span class="badge-plin">Plin</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#menu" class="nav-link active">Carta/Menú</a>
+        <a href="#ubicacion" class="nav-link">Ubicación</a>
+        <button class="cart-btn" id="cartToggle">
+          🛒 Carrito
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner Principal -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">⭐ ¡El sabor que te hace volver! ⭐</span>
+      <h1>POLLOS Y PARRILLAS</h1>
+      <p>Sabor 100% tradicional cocinado a la brasa. ¡Haz tu pedido ahora y te lo llevamos directo a tu casa!</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">Ver Carta y Pedir</a>
+        <a href="https://wa.me/51913761155" target="_blank" class="btn btn-whatsapp">📲 Pedir por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Carta / Menú -->
+  <section class="menu-section" id="menu">
+    <div class="section-header">
+      <h2>NUESTRA CARTA</h2>
+      <p>Selecciona tus platillos preferidos y arma tu pedido</p>
+    </div>
+    
+    <!-- Filtros de Categorías de la Carta -->
+    <div class="categories-bar">
+      <button class="category-btn active" data-category="todos">Todos</button>
+      <button class="category-btn" data-category="pollos">🔥 Pollos a la Brasa</button>
+      <button class="category-btn" data-category="especialidades">🥘 Especialidades</button>
+      <button class="category-btn" data-category="parrillas">🥩 Parrillas</button>
+      <button class="category-btn" data-category="mates">☕ Mates</button>
+      <button class="category-btn" data-category="refrescos">🍹 Refrescos y Bebidas</button>
+    </div>
+
+    <!-- Rejilla con los Platos -->
+    <div class="menu-grid" id="menuGrid">
+      <!-- Carga dinámicamente mediante script.js -->
+    </div>
+  </section>
+
+  <!-- Sección de Dirección y Pagos -->
+  <section class="info-section" id="ubicacion">
+    <div class="info-container">
+      <div class="info-card">
+        <h3>📍 Encuéntranos en</h3>
+        <p><strong>Jr. Simón Bolívar N° 553 - Ahuac</strong></p>
+        <p>Atención presencial y Delivery rápido.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>📲 Métodos de Pago</h3>
+        <p>Aceptamos pagos directos mediante:</p>
+        <div class="payment-methods">
+          <span class="pay-method yape-bg">Yape</span>
+          <span class="pay-method plin-bg">Plin</span>
+          <span class="pay-method cash-bg">Efectivo</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>📞 Pedidos & Delivery</h3>
+        <p class="phone-highlight">913 761 155</p>
+        <p>¡Te lo llevamos caliente hasta la puerta de tu casa!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sidebar Lateral / Carrito de Compras -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Tu Pedido - El Huarique</h3>
+      <button class="cart-close" id="cartClose">&times;</button>
+    </div>
+    
+    <div class="cart-body" id="cartItems">
+      <p class="empty-cart-msg">Tu carrito está vacío 🍗<br><small>Selecciona tus platos de la carta.</small></p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="summary-line total">
+        <span>Total:</span>
+        <span id="cartTotal">S/ 0.00</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn">Enviar Pedido a WhatsApp 📲</button>
+    </div>
+  </aside>
+
+  <!-- Pie de Página -->
+  <footer class="footer">
+    <p>&copy; 2026 El Huarique D' Jaimito - Todos los derechos reservados.</p>
+    <p>Jr. Simón Bolívar N° 553 - Ahuac | Delivery: 913 761 155</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
