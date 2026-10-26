@@ -42,7 +42,6 @@ const products = [
 
 let cart = [];
 
-// Elementos DOM
 const menuGrid = document.getElementById('menuGrid');
 const categoryBtns = document.querySelectorAll('.category-btn');
 const cartToggle = document.getElementById('cartToggle');
@@ -54,7 +53,7 @@ const cartCount = document.getElementById('cartCount');
 const cartTotal = document.getElementById('cartTotal');
 const checkoutBtn = document.getElementById('checkoutBtn');
 
-// Renderizar Productos
+
 function renderProducts(items) {
   menuGrid.innerHTML = items.map(product => `
     <div class="product-card">
@@ -69,8 +68,6 @@ function renderProducts(items) {
     </div>
   `).join('');
 }
-
-// Filtros por Categoría
 categoryBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     categoryBtns.forEach(b => b.classList.remove('active'));
@@ -86,7 +83,6 @@ categoryBtns.forEach(btn => {
   });
 });
 
-// Lógica de Carrito
 function addToCart(productId) {
   const product = products.find(p => p.id === productId);
   const existing = cart.find(item => item.id === productId);
@@ -168,7 +164,7 @@ checkoutBtn.addEventListener('click', () => {
   text += `\n*TOTAL:* S/ ${total.toFixed(2)}\n\n`;
   text += "📍 *Dirección de Entrega:* (Indica tu dirección exacta en Ahuac)";
 
-  const phone = "51913761155";
+  const phone = "51923540235";
   window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
 });
 
